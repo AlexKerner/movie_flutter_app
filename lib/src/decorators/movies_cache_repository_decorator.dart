@@ -23,7 +23,6 @@ class MoviesCacheRepositoryDecorator extends MoviesRepositoryDecorator {
     var prefs = await SharedPreferences.getInstance();
     String jsonMovies = jsonEncode(movies.toJson());
     prefs.setString('movies_cache', jsonMovies);
-    print('Movies saved in cache: ' + jsonMovies);
     return movies;
   }
 
@@ -32,7 +31,6 @@ class MoviesCacheRepositoryDecorator extends MoviesRepositoryDecorator {
     var moviesJsonString = prefs.getString('movies_cache');
     var json = jsonDecode(moviesJsonString!);
     var movies = Movies.fromJson(json);
-    print('Movies in cache: ' + movies.toString());
     return movies;
   }
 }

@@ -42,27 +42,27 @@ class DetailsPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Text(
                       movie.overview,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    Text('Original title: ' + movie.originalTitle,
+                    Text('Original title: ${movie.originalTitle}',
                         style: Theme.of(context).textTheme.titleMedium),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text('Release date: ' + movie.releaseDate,
+                    Text('Release date: ${movie.releaseDate}',
                         style: Theme.of(context).textTheme.titleMedium),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text('Votes: ' + movie.voteAverage.toString(),
+                    Text('Votes: ${movie.voteAverage}',
                         style: Theme.of(context).textTheme.titleMedium)
                   ],
                 ),

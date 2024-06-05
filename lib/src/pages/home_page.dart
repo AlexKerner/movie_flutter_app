@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:movie_flutter_app/src/controllers/movie_controller.dart';
 import 'package:movie_flutter_app/src/decorators/movies_cache_repository_decorator.dart';
 import 'package:movie_flutter_app/src/models/movies_model.dart';
@@ -44,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                           'Movies',
                           style: Theme.of(context).textTheme.headlineLarge,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         TextField(
@@ -52,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(15)),
-                                prefixIcon: Icon(Icons.search),
+                                prefixIcon: const Icon(Icons.search),
                                 hintText: 'Search for a movie...'))
                       ],
                     ),
@@ -64,12 +63,12 @@ class _HomePageState extends State<HomePage> {
                   builder: (_, movies, __) {
                     return movies != null
                         ? ListView.separated(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
                             itemCount: movies.items.length,
                             itemBuilder: (_, idx) =>
                                 CustomCardWidget(movies: movies.items[idx]),
-                            separatorBuilder: (_, __) => Divider(),
+                            separatorBuilder: (_, __) => const Divider(),
                           )
                         : Center(child: Lottie.asset('assets/lottie.json'));
                   }),

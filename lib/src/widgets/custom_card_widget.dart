@@ -54,9 +54,9 @@ class CustomCardWidget extends StatelessWidget {
                       softWrap: true,
                       overflow: TextOverflow.visible,
                     ),
-                    Spacer(),
-                    Text('Popularity: ' + movies.popularity.toString()),
-                    Text('Votes: ' + movies.voteAverage.toString())
+                    const Spacer(),
+                    Text('Popularity: ${movies.popularity}'),
+                    Text('Votes: ${movies.voteAverage}')
                   ],
                 ),
               ))
